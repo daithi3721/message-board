@@ -25,16 +25,12 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
     redirect_to root_path , notice: 'メッセージを保存しました'
-<<<<<<< HEAD
     else
       @messages = Message.all
       flash.now[:alert] = "メッセージの保存に失敗しました。"
       render 'index'
     end
    end
-=======
-  end
->>>>>>> challenge1
 
   private
   def message_params
